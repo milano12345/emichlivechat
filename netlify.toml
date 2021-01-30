@@ -1,5 +1,5 @@
 [build]
-  functions = "functions" # netlify dev uses this to know where to scaffold and serve your functions
+  functions = "/opt/build/repo/functions" # netlify dev uses this to know where to scaffold and serve your functions
   command = "CI = yarn run build"
-  publish = "public/"
+  publish = "/opt/build/repo/public/"
   
