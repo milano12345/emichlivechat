@@ -44,7 +44,7 @@ class ActionProvider {
 
   handleDefault = () => {
     const message = this.createChatBotMessage(
-      "How can I help? Here is the overview.",
+      "How can I kill you? Here is the overview.",
       {
         withAvatar: true,
         widget: "overview",
