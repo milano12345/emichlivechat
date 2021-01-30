@@ -15,7 +15,8 @@
     "react-dom": "^16.13.1",
     "react-gist": "^1.2.1",
     "react-scripts": "3.4.1",
-    "react-util-kit": "^0.0.14"
+    "react-util-kit": "^0.0.14",
+    "webpack": "^5.19.0"
   },
   "scripts": {
     "start": "react-scripts start",
