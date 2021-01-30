@@ -2,4 +2,4 @@
   functions = "functions" # netlify dev uses this to know where to scaffold and serve your functions
   publish = "public"
   command = "CI= npm install && npm run build"
-  commandOrigin: "config"
+  commandOrigin = "config"
