@@ -1,5 +1,5 @@
 [build]
   functions = "functions" # netlify dev uses this to know where to scaffold and serve your functions
-  command = "CI= yarn install && yarn run build"
+  command = "CI= yarn install && yarn build"
   publish = "public/"
   
