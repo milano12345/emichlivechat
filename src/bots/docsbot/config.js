@@ -1,16 +1,13 @@
 import React from "react";
 import { createChatBotMessage } from "react-chatbot-kit";
-
-import Overview from "./widgets/Overview/Overview";
 import MessageParserDocs from "./widgets/docs/MessageParserDocs/MessageParserDocs";
 import ActionProviderDocs from "./widgets/docs/ActionProviderDocs/ActionProviderDocs";
 import Config from "./widgets/docs/Config/Config";
 import WidgetDocs from "./widgets/docs/WidgetDocs/WidgetDocs";
 
-const botName = "DocsBot";
-
+const botName = "Daniel"
 const config = {
-  botName: botName,
+  botName: [botName],
   lang: "no",
   customStyles: {
     botMessageBox: {
@@ -22,14 +19,14 @@ const config = {
   },
   initialMessages: [
     createChatBotMessage(
-      `Hi I'm ${botName}. I’m here to help you explain how I work.`
+      `Hi I'm Daniel. I’m a salesman for Emich Chevrolet. How can I assist you?`
     ),
     createChatBotMessage(
-      "Here's a quick overview over what I need to function. ask me about the different parts to dive deeper.",
+      "We have many vehicles available, when's the best time for you to stop by?",
       {
-        withAvatar: false,
-        delay: 500,
-        widget: "overview",
+        withAvatar: true,
+        delay: 900,
+        widget: "widget",
       }
     ),
   ],
@@ -39,11 +36,6 @@ const config = {
   },
   customComponents: {},
   widgets: [
-    {
-      widgetName: "overview",
-      widgetFunc: (props) => <Overview {...props} />,
-      mapStateToProps: ["gist"],
-    },
     {
       widgetName: "messageParser",
       widgetFunc: (props) => <MessageParserDocs {...props} />,

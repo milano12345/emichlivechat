@@ -3,8 +3,6 @@ import { FadeIn } from "react-anim-kit";
 import { ConditionallyRender } from "react-util-kit";
 import Gist from "react-gist";
 
-import { ReactComponent as ActionProviderOverview } from "../../../../../assets/img/actionprovider-overview.svg";
-
 import styles from "./ActionProviderDocs.module.css";
 import InformationBox from "../../InformationBox/InformationBox";
 
@@ -20,9 +18,6 @@ const ActionProviderDocs = ({ infoBox, setState }) => {
 
   return (
     <div>
-      <FadeIn left by={250}>
-        <ActionProviderOverview className={styles.overviewSVG} />
-      </FadeIn>
 
       <ConditionallyRender
         ifTrue={showActionProviderInfoBox}

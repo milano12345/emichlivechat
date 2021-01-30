@@ -1,8 +1,8 @@
 {
-  "name": "react-chatbot-kit-docs",
+  "name": "chevychat",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://fredrikoseberg.github.io/react-chatbot-kit-docs/",
+  "homepage": "http://danielmilano.tech/",
   "dependencies": {
     "@babel/runtime": "^7.9.6",
     "@testing-library/jest-dom": "^4.2.4",

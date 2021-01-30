@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { FadeIn } from "react-anim-kit";
 import { ConditionallyRender } from "react-util-kit";
 
-import { ReactComponent as MessageParserOverview } from "../../../../../assets/img/message-parser-overview.svg";
-
 import styles from "./MessageParserDocs.module.css";
 import InformationBox from "../../InformationBox/InformationBox";
 
@@ -20,7 +18,7 @@ const MessageParserDocs = ({ infoBox, setState }) => {
   return (
     <div className={styles.overview}>
       <FadeIn left by={250}>
-        <MessageParserOverview className={styles.overviewSVG} />
+
       </FadeIn>
 
       <ConditionallyRender
@@ -28,16 +26,10 @@ const MessageParserDocs = ({ infoBox, setState }) => {
         show={
           <InformationBox setState={setState}>
             <p className={styles.infoBoxParagraph}>
-              You have to write your own messageparser. The beauty of this is
-              that you have full control over how you want to parse messages
-              from the user. You can make it as complex or simple as you want.
-              The simplest version is to check for keywords with javascript
-              .includes()
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque doloribus sint quasi quaerat ut minus aliquid architecto. Et voluptatum assumenda commodi nihil, harum totam nesciunt neque magni illum fuga architecto.
             </p>
             <p className={styles.infoBoxParagraph}>
-              Once you pass the messageparser to the chatbot, it will initialize
-              it with the actionprovider you provided, so that you can determine
-              which action after you have parsed the message.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque consequuntur asperiores voluptates, in alias dolores sint ab fugit quasi veritatis quisquam repudiandae assumenda ea quidem? Cupiditate deleniti earum non.
             </p>
           </InformationBox>
         }

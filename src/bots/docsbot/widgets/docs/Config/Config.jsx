@@ -15,7 +15,7 @@ const Config = ({ gist, setState }) => {
   return (
     <div>
       <a
-        href="https://gist.github.com/FredrikOseberg/87795296efb67fe76fa05fc839d22e25"
+        href="https://danielmilano.tech"
         target="_blank"
         rel="noopener noreferrer"
         className={styles.configLink}
