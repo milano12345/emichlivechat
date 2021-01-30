@@ -1,50 +1,92 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import React, { useState } from "react";
+import Chatbot from "react-chatbot-kit";
+import { ConditionallyRender } from "react-util-kit";
+import Gist from "react-gist";
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
-  }
+import GradientBackground from "./components/GradientBackground/GradientBackground";
+import ConfigSection from "./components/pagesections/ConfigSection/ConfigSection";
+import MessageParserSection from "./components/pagesections/MessageParserSection/MessageParserSection";
+import ActionProviderSection from "./components/pagesections/ActionProviderSection/ActionProviderSection";
+import WidgetSection from "./components/pagesections/WidgetSection/WidgetSection";
+import ExamplesSection from "./components/pagesections/ExamplesSection/ExamplesSection";
+import SaveDialogueSection from "./components/pagesections/SaveDialogueSection/SaveDialogueSection";
+import TutorialSection from "./components/pagesections/TutorialSection/TutorialSection";
+import Menu from "./components/Menu/Menu";
 
-  handleClick = api => e => {
-    e.preventDefault()
+import { ReactComponent as Logo } from "./assets/icons/logo.svg";
+import { ReactComponent as ButtonIcon } from "./assets/icons/robot.svg";
 
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
+import config from "./bots/docsbot/config";
+import MessageParser from "./bots/docsbot/MessageParser";
+import ActionProvider from "./bots/docsbot/ActionProvider";
 
-  render() {
-    const { loading, msg } = this.state
+import "./App.css";
 
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
-}
+function App() {
+  const [showChatbot, toggleChatbot] = useState(true);
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
+  return (
+    <div className="App">
+      <GradientBackground>
+        <Menu />
+        <Logo style={{ paddingTop: "40px", height: "150px", width: "150px" }} />
+        <h1 className="app-header">React-chatbot-kit</h1>
+        <div className="app-npm-install">npm install react-chatbot-kit</div>
+        <div className="app-chatbot-container">
+          <ConditionallyRender
+            ifTrue={showChatbot}
+            show={
+              <Chatbot
+                config={config}
+                messageParser={MessageParser}
+                actionProvider={ActionProvider}
+              />
+            }
+          />
+        </div>
+
+        <button
+          className="app-chatbot-button"
+          onClick={() => toggleChatbot((prev) => !prev)}
+        >
+          <ButtonIcon className="app-chatbot-button-icon" />
+        </button>
+
+        <div className="app-overview">
+          <h2 className="app-header">Overview</h2>
+          <p className="app-paragraph">
+            The chatbot works by importing it and giving it a messageparser, a
+            config and an actionprovider. Scroll on to view more information
+            about each part. Or ask the bot.
           </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
-  }
+          <div className="app-overview-gist-container">
+            <Gist id="21ad31cad1298ead0115719cce8587f0" />
+          </div>
+
+          <h2 className="app-header">Quickstart</h2>
+          <p className="app-paragraph">
+            To get started quickly, check out the following gist to get a
+            scaffold for each part you need to provide to the chatbot.
+          </p>
+          <a
+            href="https://gist.github.com/FredrikOseberg/c1e8ec83ade6e89ca84882e33caf599c"
+            className="app-quickstart-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Go to gist
+          </a>
+        </div>
+      </GradientBackground>
+      <ConfigSection />
+      <MessageParserSection />
+      <ActionProviderSection />
+      <WidgetSection />
+      <SaveDialogueSection />
+      <TutorialSection />
+      <ExamplesSection />
+    </div>
+  );
 }
 
-export default App
+export default App;
