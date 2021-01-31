@@ -34,8 +34,14 @@ function App() {
                 actionProvider={ActionProvider}
               />
             }
-          />
-        </div>
+            />
+            <div class="Options_options__2MYhE">
+              <button class="Options_option__3jZ7W">messageparser</button>
+              <button class="Options_option__3jZ7W">config</button>
+              <button class="Options_option__3jZ7W">actionprovider</button>
+              <button class="Options_option__3jZ7W">widgets</button>
+              </div>
+              </div>
 
         <button
           className="app-chatbot-button"

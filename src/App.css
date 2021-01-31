@@ -119,7 +119,11 @@ li {
 
 .react-chatbot-kit-chat-container {
   position: relative;
-  width: 53vh;
+  width: 65vh;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  height: 600px!important
 }
