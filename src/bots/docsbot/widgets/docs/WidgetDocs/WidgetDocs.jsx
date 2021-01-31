@@ -26,10 +26,10 @@ const WidgetDocs = ({ infoBox, setState }) => {
               define it in the "widget" section of the config file:
             </p>
             <Gist id="d1ca7820bfa6a0f8b66a8a5d86a09d8e" />
-            <p className={styles.infoBoxParagraph}>
+            {/* <p className={styles.infoBoxParagraph}>
               You will then be able to use the widget when you send a response
               with createChatBotMessage:
-            </p>
+            </p> */}
             <Gist id="6f0c3aeed1ef5b87b4d5652d69e3419d" />
           </InformationBox>
         }
