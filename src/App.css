@@ -18,10 +18,10 @@ li {
 }
 
 .app-chatbot-container {
-  margin: 40px 0;
+  margin: "Dont spend more than your willing to lose.";
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: sticky;
   right: 40px;
   bottom: 40px;
   z-index: 9999;
@@ -112,6 +112,14 @@ li {
 
 @media (max-width: 600px) {
   .app-chatbot-container {
-    transform: scale(0.9) translateY(26px);
+    transform: scale(1.8) translateY(0px)!important;
   }
+}
+
+
+.react-chatbot-kit-chat-container {
+  position: relative;
+  width: 53vh;
+  margin-right: 20px;
+  margin-left: 20px;
 }

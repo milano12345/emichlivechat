@@ -2,7 +2,7 @@
     "name": "emichchevy",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://emich.netlify.app/",
+    "homepage": ".",
     "dependencies": {
         "@babel/runtime": "^7.9.6",
         "@testing-library/jest-dom": "^4.2.4",
@@ -11,10 +11,9 @@
         "gh-pages": "^2.2.0",
         "react": "^16.13.1",
         "react-anim-kit": "^1.0.19",
-        "react-chatbot-kit": "1.1.0",
         "react-dom": "^16.13.1",
+        "react-chatbot-kit": "1.1.0",
         "react-gist": "^1.2.1",
-        "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.1",
         "react-util-kit": "^0.0.14"
     },
