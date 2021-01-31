@@ -18,7 +18,7 @@ li {
 }
 
 .app-chatbot-container {
-  margin: "Dont spend more than your willing to lose.";
+  margin: 30px;
   display: flex;
   justify-content: center;
   position: sticky;
@@ -126,4 +126,23 @@ li {
 
 .react-chatbot-kit-chat-inner-container {
   height: 600px!important
+}
+
+.react-chatbot-kit-chat-bot-message {
+  background-color: #2898ec;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: medium;
+  position: relative;
+  width: 184.5px;
+  /* margin-left: auto; */
+  text-align: left;
+}
+
+.react-chatbot-kit-chat-message-container {
+  padding: 0 17.5px 10px 17.5px;
+  overflow: scroll;
+  height: 520px;
 }
