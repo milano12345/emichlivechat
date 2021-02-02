@@ -20,12 +20,11 @@ li {
 .app-chatbot-container {
   margin: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   position: sticky;
   right: 40px;
   bottom: 40px;
   z-index: 9999;
-  box-shadow: 5px 5px 13px rgba(91, 81, 81, 0.4);
   border-radius: 5px;
 }
 
@@ -144,5 +143,5 @@ li {
 .react-chatbot-kit-chat-message-container {
   padding: 0 17.5px 10px 17.5px;
   overflow: scroll;
-  height: 520px;
+  height: 520px!important;
 }

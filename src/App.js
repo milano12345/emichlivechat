@@ -28,26 +28,13 @@ function App() {
           <ConditionallyRender
             ifTrue={showChatbot}
             show={
-              <div class="Options_options__2MYhE">
                <Chatbot
                 config={config}
                 messageParser={MessageParser}
                 actionProvider={ActionProvider}
+                options
               />
-              <button class="Options_option__3jZ7W">messageparser</button>
-              <button class="Options_option__3jZ7W">config</button>
-              <button class="Options_option__3jZ7W">actionprovider</button>
-              <button class="Options_option__3jZ7W">widgets</button>
-              </div>
             }
-            // show={
-            //   <div class="Options_options__2MYhE">
-            //   <button class="Options_option__3jZ7W">messageparser</button>
-            //   <button class="Options_option__3jZ7W">config</button>
-            //   <button class="Options_option__3jZ7W">actionprovider</button>
-            //   <button class="Options_option__3jZ7W">widgets</button>
-            //   </div>
-            // }
             />
 </div>
         <button
